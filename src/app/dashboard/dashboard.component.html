@@ -1,0 +1,96 @@
+<div class="sidebar">
+    <h2>Order Management</h2>
+    <img src="assets/order-fulfillment.png" alt="Logo" class="logo" />
+    <ul>
+      <li><a routerLink="/dashboard" routerLinkActive="active"><i class="pi pi-home"></i> Dashboard</a></li>
+      <!-- <li><a routerLink="/login" routerLinkActive="active"><i class="pi pi-sign-in"></i> Login</a></li>
+      <li><a routerLink="/register" routerLinkActive="active"><i class="pi pi-user-plus"></i> Register</a></li> -->
+      <li><a routerLink="/orders" routerLinkActive="active"><i class="pi pi-list"></i> Orders</a></li>
+      <li><a routerLink="/manage-users" routerLinkActive="active"><i class="pi pi-users"></i> Manage Users</a></li>
+      <li><a routerLink="/settings" routerLinkActive="active"><i class="pi pi-cog"></i> Settings</a></li>
+      <li><a (click)="logout()" class="logout"><i class="pi pi-sign-out"></i> Logout</a></li>
+    </ul>
+</div>
+<div class="body">
+  <div class="dashboard">
+    <div class="header">
+      <h3>Order Details</h3>
+      <div class="header-buttons">
+        <button (click)="exportToExcel()" class="header-button">
+          <i class="pi pi-file-excel"></i> Export to Excel
+        </button>
+        <button (click)="refreshList()" class="header-button">
+          <i class="pi pi-refresh"></i> Refresh List
+        </button>
+      </div>
+    </div>
+    <div class="filter-bar">
+      <div class="filter-item">
+        <label for="status">Status</label>
+        <p-dropdown id="status" [options]="statusOptions" [(ngModel)]="selectedStatus" placeholder="Select Status"></p-dropdown>
+      </div>
+      <div class="filter-item">
+        <label for="location">Location</label>
+        <p-dropdown id="location" [options]="locationOptions" [(ngModel)]="selectedLocation" placeholder="Select Location"></p-dropdown>
+      </div>
+      <div class="filter-item">
+        <label for="entries">Show Entries</label>
+        <p-dropdown id="entries" [options]="entriesOptions" [(ngModel)]="selectedEntries" placeholder="Select Entries"></p-dropdown>
+      </div>
+      <div class="filter-item search-container">
+        <label for="search">Search</label>
+        <div class="search-box">
+          <input type="text" id="search" [(ngModel)]="searchName" placeholder="Search by name" />
+          <button class="search-button"><i class="pi pi-search"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="col">
+        <p-card title="Total Orders" styleClass="card">
+          <h3>Total Orders</h3>
+          <h1>{{ getTotalOrders() }}</h1>
+        </p-card>
+      </div>
+      <div class="col">
+        <p-card title="Shipped Orders" styleClass="card">
+          <h3>Shipped Orders</h3>
+          <h1>{{ getShippedOrders() }}</h1>
+        </p-card>
+      </div>
+      <div class="col">
+        <p-card title="Pending Orders" styleClass="card">
+          <h3>Pending Orders</h3>
+          <h1>{{ getPendingOrders() }}</h1>
+        </p-card>
+      </div>
+    </div>
+
+    <p-table [value]="orders" [paginator]="true" [rows]="5">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>ID</th>
+          <th>Customer</th>
+          <th>Date</th>
+          <th>Status</th>
+          <th>Net Amount</th>
+          <th>Action</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-order>
+        <tr>
+          <td>{{ order.id }}</td>
+          <td>{{ order.customer }}</td>
+          <td>{{ order.date }}</td>
+          <td>{{ order.status }}</td>
+          <td>{{ order.netAmount | currency }}</td>
+          <td>
+            <button (click)="performAction(order)" class="action-button">
+              <i class="pi pi-pencil"></i>
+            </button>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>

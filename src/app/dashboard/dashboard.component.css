@@ -1,0 +1,275 @@
+.sidebar {
+    width: 250px;
+    background-color: #161f26;
+    color: white;
+    padding: 15px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  }
+  .logo {
+    width: 100%; /* Make the logo responsive */
+    height: 150px; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Space below the logo */
+}
+  .sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin: 15px 0;
+  }
+  
+  .sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center icons vertically */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .sidebar a i {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 1.2em; /* Adjust icon size */
+  }
+  
+  .sidebar a:hover {
+    background-color: #005da0;
+  }
+  
+  .active {
+    background-color: #005da0;
+  }
+
+
+  .action-button {
+    background-color: #007ad9;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .action-button:hover {
+    background-color: #005da0;
+  }
+  
+  .order-table {
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .order-table th {
+    background-color: #181846;;
+    color: white;
+  }
+  
+  .order-table td {
+    text-align: center;
+  }
+
+
+  .header {
+    display: flex;
+    justify-content: space-between; /* Align title and buttons */
+    align-items: center; /* Center vertically */
+    background-color: #181846; /* Dark background */
+    padding: 15px;
+    color: white; /* Text color */
+    border-radius: 8px;
+  
+   margin-bottom: 10px;
+  }
+  
+  .header h3 {
+    margin: 0; /* Remove default margin */
+  }
+  
+  .header-buttons {
+    display: flex; /* Align buttons in one line */
+  }
+  
+  .header-button {
+    background-color: #007ad9;
+    color: white;
+    border: none;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px; /* Space between buttons */
+    transition: background-color 0.3s;
+  }
+  
+  .header-button:hover {
+    background-color: #005da0;
+  }
+  
+  .filter-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .filter-item{
+    margin-left: 10px;
+  }
+  .logout{
+   margin-top: 180px;
+  }
+  .search-container {
+    display: flex; /* Align the search input and button in one line */
+    align-items: center;
+  }
+  
+  .search-box {
+    display: flex; /* Align search input and button */
+    align-items: center;
+  
+  }
+  
+  .search-button {
+    background-color: #007ad9;
+    color: white;
+    border: none;
+    padding: 0.5em; /* Reduce padding for a smaller button */
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px; /* Space between input and button */
+    height: 30px; /* Match height with input */
+    width: 30px; /* Make it a square */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Remaining CSS styles stay the same */
+  
+  /* Existing styles for action buttons and tables */
+  .action-button {
+    background-color: #007ad9;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .action-button:hover {
+    background-color: #005da0;
+  }
+  
+  .order-table {
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .order-table th {
+    background-color: #181846;;
+    color: white;
+  }
+  
+  .order-table td {
+    text-align: center;
+  }
+
+  
+
+
+.dashboard {
+    padding: 20px;
+    background-color: #c6c7d7;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 1250px;
+  height: 700px;
+overflow-y: auto;
+
+ 
+  }
+
+  .body{
+   
+    margin-left: 250px;
+  }
+
+  .col {
+    flex: 1; /* Make columns flexible */
+    margin-right: 20px; /* Space between columns */
+  
+  }
+  
+  .col h1{
+    justify-content: center;
+    margin-left: 90px;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .grid {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .col {
+    flex: 1;
+    margin: 0 10px;
+  }
+
+  .card {
+    text-align: center;
+    padding: 10px;
+    height: 30px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .order-table {
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .order-table th {
+    background-color: #181846;;
+    color: white;
+  }
+  
+  .order-table td {
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .grid {
+      flex-direction: column;
+    }
+  
+    .col {
+      margin: 10px 0;
+    }
+  }

@@ -1,0 +1,69 @@
+<div class="sidebar">
+  <h2>Order Management</h2>
+  <img src="assets/order-fulfillment.png" alt="Logo" class="logo" />
+  <ul>
+    <li><a routerLink="/dashboard"routerLinkActive="active"><i class="pi pi-home"></i> Dashboard</a></li>
+    <!-- <li><a routerLink="/login" routerLinkActive="active"><i class="pi pi-sign-in"></i> Login</a></li>
+    <li><a routerLink="/register" routerLinkActive="active"><i class="pi pi-user-plus"></i> Register</a></li> -->
+    <li><a routerLink="/orders" routerLinkActive="active"><i class="pi pi-list"></i> Orders</a></li>
+    <li><a routerLink="/manage-users" routerLinkActive="active"><i class="pi pi-users"></i> Manage Users</a></li>
+    <li><a routerLink="/settings" routerLinkActive="active"><i class="pi pi-cog"></i> Settings</a></li>
+    <li><a (click)="logout()" class="logout"><i class="pi pi-sign-out"></i> Logout</a></li>
+  </ul>
+</div>
+
+<div class="manage-users">
+  <h2>Manage Users</h2>
+
+  <button (click)="openModal()" class="add-user-button">Add User</button>
+
+  <p-table [value]="users" [paginator]="true" [rows]="5" class="user-table">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Actions</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-user>
+      <tr>
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.role }}</td>
+        <td>
+          <button (click)="editUser(user)" class="action-button">
+            <i class="pi pi-pencil"></i>
+          </button>
+          <button (click)="deleteUser(user)" class="action-button">
+            <i class="pi pi-trash"></i>
+          </button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+  <!-- Modal for Add/Edit User -->
+  <p-dialog header="{{ editingUser ? 'Edit User' : 'Add User' }}" [(visible)]="displayModal" [modal]="true" [responsive]="true" [style]="{width: '500px'}">
+    <div class="user-form">
+      <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" [(ngModel)]="currentUser.name" name="name" required />
+        <div *ngIf="userForm.controls['name']?.invalid && userForm.controls['name']?.touched" class="error-message">Name is required.</div>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" [(ngModel)]="currentUser.email" name="email" required />
+        <div *ngIf="userForm.controls['email']?.invalid && userForm.controls['email']?.touched" class="error-message">Valid email is required.</div>
+
+        <label for="role">Role:</label>
+        <input type="text" id="role" [(ngModel)]="currentUser.role" name="role" required />
+        <div *ngIf="userForm.controls['role']?.invalid && userForm.controls['role']?.touched" class="error-message">Role is required.</div>
+
+        <button type="submit" class="submit-button">{{ editingUser ? 'Update User' : 'Add User' }}</button>
+        <button type="button" (click)="cancelEditing()" class="cancel-button">Cancel</button>
+      </form>
+    </div>
+  </p-dialog>
+</div>

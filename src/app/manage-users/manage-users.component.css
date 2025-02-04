@@ -1,0 +1,377 @@
+.sidebar {
+    width: 250px;
+    background-color: #161f26;
+    color: white;
+    padding: 15px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin: 15px 0;
+  }
+  
+  .sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center icons vertically */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .sidebar a i {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 1.2em; /* Adjust icon size */
+  }
+  
+  .sidebar a:hover {
+    background-color: #005da0;
+  }
+  
+  .active {
+    background-color: #005da0;
+  }
+
+
+  .action-button {
+    background-color: #007ad9;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .action-button:hover {
+    background-color: #005da0;
+  }
+  
+
+  
+  /* Sidebar Styles */
+  .sidebar {
+      width: 250px;
+      background-color: #161f26;
+      color: white;
+      padding: 15px;
+      height: 100vh;
+      position: fixed;
+      left: 0;
+      top: 0;
+      overflow-y: auto;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .sidebar h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: white;
+  }
+  
+  .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+  }
+  
+  .sidebar li {
+      margin: 15px 0;
+  }
+  
+  .sidebar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+  }
+  
+  .sidebar a i {
+      margin-right: 10px;
+      font-size: 1.2em;
+  }
+  
+  .sidebar a:hover {
+      background-color: #005da0;
+  }
+  
+  .active {
+      background-color: #005da0;
+  }
+  
+  /* Manage Users Styles */
+  .manage-users {
+      /* Space for sidebar */
+   
+      background-color: #f4f4f4;  /* Light background for contrast */
+      border-radius: 8px;  /* Rounded corners */
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+      width: 1200px;
+  }
+  
+  .manage-users h2 {
+      color: #333;  /* Darker color for the header */
+      margin-bottom: 20px;
+  }
+
+ 
+  
+  /* Sidebar Styles */
+  .sidebar {
+      width: 250px;
+      background-color: #161f26;
+      color: white;
+      padding: 15px;
+      height: 100vh;
+      position: fixed;
+      left: 0;
+      top: 0;
+      overflow-y: auto;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .sidebar h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: white;
+  }
+  
+  .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+  }
+  
+  .sidebar li {
+      margin: 15px 0;
+  }
+  
+  .sidebar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+  }
+  
+  .sidebar a i {
+      margin-right: 10px;
+      font-size: 1.2em;
+  }
+  
+  .sidebar a:hover {
+      background-color: #005da0;
+  }
+  
+  .active {
+      background-color: #005da0;
+  }
+  
+  /* Manage Users Styles */
+  .manage-users {
+      margin-left: 250px;  /* Space for sidebar */
+      padding: 20px;
+      background-color: #c6c7d7;  /* Light background for contrast */
+      border-radius: 8px;  /* Rounded corners */
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+      height: 650px;
+  }
+  
+  .manage-users h2 {
+      color: #333;  /* Darker color for the header */
+      margin-bottom: 20px;
+  }
+  
+  .add-user-button {
+      background-color: #007ad9;
+      color: white;
+      border: none;
+      padding: 0.7em 1.5em;  /* Increased padding for bigger button */
+      border-radius: 5px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      font-size: 1em;  /* Increased font size */
+      transition: background-color 0.3s;
+  }
+  
+  .add-user-button:hover {
+      background-color: #005da0;
+  }
+  
+  .user-table {
+      width: 100%;  /* Full width */
+      border-collapse: collapse;  /* Collapse borders for a cleaner look */
+  }
+
+  .user-table th, .user-table td {
+    padding: 12px;  /* Increased padding for better spacing */
+    text-align: left;  /* Align text to the left */
+    border-bottom: 1px solid #ddd;  /* Bottom border for rows */
+}
+
+.user-table th {
+    background-color: #181846;  /* Table header background */
+    color: white;
+}
+
+.action-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #007ad9;
+}
+
+.action-button:hover {
+    color: #005da0;
+}
+
+
+.manage-users {
+    padding: 20px;
+  }
+  
+  .add-user-button {
+    background-color: #007ad9;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .add-user-button:hover {
+    background-color: #005da0;
+  }
+  
+  .user-table {
+    margin-top: 20px;
+  }
+  
+  .action-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #007ad9;
+    margin-right: 10px;
+  }
+  
+  .action-button:hover {
+    color: #005da0;
+  }
+
+  .user-form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    padding: 20px; /* Padding inside the modal */
+    background-color: #ffffff; /* White background for the modal */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.user-form label {
+    margin: 10px 0 5px; /* Space above labels */
+    font-weight: bold; /* Bold labels for clarity */
+    color: #333; /* Dark text color */
+}
+
+.user-form input {
+    padding: 10px; /* Padding inside input fields */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Font size */
+    transition: border-color 0.3s; /* Smooth border transition */
+    margin-bottom: 15px; /* Space below input fields */
+   width: 400px;
+}
+.logout{
+  margin-top: 180px;
+ }
+
+ .logo {
+  width: 100%; /* Make the logo responsive */
+  height: 150px; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Space below the logo */
+}
+.user-form input:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none; /* Remove default outline */
+}
+
+.user-form input.ng-invalid.ng-touched {
+    border-color: #e74c3c; /* Red border for invalid inputs */
+}
+
+.error-message {
+    color: #e74c3c; /* Red color for error messages */
+    font-size: 12px; /* Smaller font size */
+    margin-top: -5px; /* Space above error messages */
+    margin-bottom: 15px; /* Space below error messages for separation */
+}
+
+/* Button group styles */
+.button-group {
+    margin-top: 20px; /* Space above button group */
+    display: flex; /* Use flexbox for button alignment */
+    justify-content: space-between; /* Space between buttons */
+}
+
+.submit-button {
+    background-color: #007bff; /* Blue background for submit button */
+    color: white;
+    padding: 10px 20px; /* Padding for buttons */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-right: 10px; /* Space between buttons */
+}
+
+.submit-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.cancel-button {
+    background-color: #ff6f61; /* Coral background for cancel button */
+    color: white;
+    padding: 10px 20px; /* Padding for buttons */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.cancel-button:hover {
+    background-color: #e95e51; /* Darker coral on hover */
+}
+
+.button-group button {
+    flex: 1; /* Allow buttons to grow and take equal space */
+    margin-right: 10px; /* Space between buttons */
+}
+
+.button-group button:last-child {
+    margin-right: 0; /* Remove margin from the last button */
+}

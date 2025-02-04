@@ -1,0 +1,80 @@
+.color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;  /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background-image: url('src/assets/front.png'); /* Ensure the path is correct */
+    background-size: cover; /* Make background cover the entire container */
+    background-position: center; /* Center the background image */
+ 
+   
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5); /* Dark overlay for better contrast */
+}
+
+p-card {
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background *//* White background with slight transparency */
+   /* Increased width */
+ 
+  
+}
+.m3{
+    margin-left: 25px;
+}
+.field {
+    margin-bottom: 15px; /* Space between fields */
+}
+
+label {
+    font-weight: bold; /* Bold labels */
+    margin-bottom: 5px;
+    color: #333; /* Darker color for better contrast */
+}
+
+input {
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded input */
+    padding: 10px; /* Padding inside inputs */
+    transition: border-color 0.3s; /* Transition for input focus */
+}
+
+input:focus {
+    border-color: #007ad9; /* Border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.p-error {
+    color: red; /* Error message color */
+}
+
+p-button {
+    background-color: #007ad9; /* Button color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded button */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+p-button:hover {
+    background-color: #005da0; /* Darker color on hover */
+}
+
+.mt-2 {
+    margin-top: 10px; /* Margin for spacing */
+    text-align: center; /* Center text */
+}
+
+.forgot-password {
+    text-align: center; /* Center the forgot password link */
+    margin-top: 10px; /* Space above the link */
+}
+
+.forgot-password a {
+    color: #007ad9; /* Link color */
+    text-decoration: none; /* No underline */
+}
+
+.forgot-password a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
