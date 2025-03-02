@@ -8,8 +8,7 @@
     <li><a routerLink="/orders" routerLinkActive="active"><i class="pi pi-list"></i> Orders</a></li>
     <li><a routerLink="/manage-users" routerLinkActive="active"><i class="pi pi-users"></i> Manage Users</a></li>
     <li><a routerLink="/settings" routerLinkActive="active"><i class="pi pi-cog"></i> Settings</a></li>
-    <li><a (click)="logout()" class="logout"><i class="pi pi-sign-out"></i> Logout</a></li>
-  </ul>
+    <li><a (click)="logout()" (keyup.enter)="logout()" tabindex="0" class="logout"><i class="pi pi-sign-out"></i> Logout</a></li>  </ul>
 </div>
 
 <div class="manage-users">
