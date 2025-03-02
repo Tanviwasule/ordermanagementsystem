@@ -9,9 +9,9 @@ import { AuthService } from '../services/auth.service'; // Adjust the path based
   styleUrls: ['./forgot-password.component.css']
 })
 export class ForgotPasswordComponent {
-  emailSent: boolean = false; // Flag to check if email has been sent
+  emailSent = false; // Flag to check if email has been sent
   errorMessage: string | null = null; // For capturing error messages
-  resetPassword: boolean = false; // Flag to toggle reset password form
+  resetPassword = false;// Flag to toggle reset password form
 
   constructor(private authService: AuthService, private router: Router) {} // Inject Router
 
@@ -22,7 +22,7 @@ export class ForgotPasswordComponent {
         response => {
           this.emailSent = true;
           this.errorMessage = null; // Clear any previous errors
-          alert(response.message);
+          alert(response.message); // Use response.message as needed
           this.resetPassword = true; // Show reset password fields
         },
         error => {

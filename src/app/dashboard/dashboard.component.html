@@ -8,7 +8,7 @@
       <li><a routerLink="/orders" routerLinkActive="active"><i class="pi pi-list"></i> Orders</a></li>
       <li><a routerLink="/manage-users" routerLinkActive="active"><i class="pi pi-users"></i> Manage Users</a></li>
       <li><a routerLink="/settings" routerLinkActive="active"><i class="pi pi-cog"></i> Settings</a></li>
-      <li><a (click)="logout()" class="logout"><i class="pi pi-sign-out"></i> Logout</a></li>
+      <li><a (click)="logout()" (keyup.enter)="logout()" tabindex="0" class="logout"><i class="pi pi-sign-out"></i> Logout</a></li>
     </ul>
 </div>
 <div class="body">
@@ -16,10 +16,17 @@
     <div class="header">
       <h3>Order Details</h3>
       <div class="header-buttons">
-        <button (click)="exportToExcel()" class="header-button">
+
+
+          <button (click)="exportToExcel()" (keyup.enter)="exportToExcel()" tabindex="0">
+
           <i class="pi pi-file-excel"></i> Export to Excel
         </button>
-        <button (click)="refreshList()" class="header-button">
+
+
+
+          <!-- dashboard.component.html -->
+<button (click)="refreshList()" (keyup.enter)="refreshList()" tabindex="0">
           <i class="pi pi-refresh"></i> Refresh List
         </button>
       </div>
@@ -41,8 +48,9 @@
         <label for="search">Search</label>
         <div class="search-box">
           <input type="text" id="search" [(ngModel)]="searchName" placeholder="Search by name" />
-          <button class="search-button"><i class="pi pi-search"></i></button>
-        </div>
+          <button class="search-button" tabindex="0" aria-label="Search">
+            <i class="pi pi-search"></i>
+        </button>        </div>
       </div>
     </div>
     <div class="grid">
@@ -85,9 +93,10 @@
           <td>{{ order.status }}</td>
           <td>{{ order.netAmount | currency }}</td>
           <td>
-            <button (click)="performAction(order)" class="action-button">
-              <i class="pi pi-pencil"></i>
-            </button>
+         <!-- Button for editing an order -->
+<button (click)="performAction(order)" (keyup.enter)="performAction(order)" tabindex="0" class="action-button" aria-label="Edit Order">
+  <i class="pi pi-pencil"></i>
+</button>
           </td>
         </tr>
       </ng-template>

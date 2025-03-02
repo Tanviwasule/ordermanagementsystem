@@ -27,7 +27,7 @@ export class DashboardComponent {
     { label: 'Delivered', value: 'Delivered' }
   ];
 
-  
+
   locationOptions = [
     { label: 'All Locations', value: null },
     { label: 'Location A', value: 'Location A' },
@@ -42,10 +42,10 @@ export class DashboardComponent {
     { label: '50', value: 50 }
   ];
 
-  selectedStatus: any;
-  selectedLocation: any;
-  selectedEntries: number = 5; // Default to show 5 entries
-  searchName: string = '';
+  selectedStatus: string | null = null; // Can be a string or null
+  selectedLocation: string | null = null; // Can be a string or null
+  selectedEntries = 5; // Removed explicit type annotation
+  searchName = '';
   getTotalOrders(): number {
     return this.orders.length;
   }
@@ -85,5 +85,5 @@ export class DashboardComponent {
   this.router.navigate(['manage-users'])
  }
 
-  
+
 }
