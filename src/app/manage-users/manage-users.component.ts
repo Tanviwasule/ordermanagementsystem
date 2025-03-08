@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms'; // Import NgForm for template-driven forms
 
 interface User {
   id: number;
@@ -20,9 +21,9 @@ export class ManageUsersComponent {
     { id: 3, name: 'Bob Johnson', email: 'bob.johnson@example.com', role: 'User' },
   ];
 
-  nextId: number = 4;
-  displayModal: boolean = false; // Control modal visibility
-  editingUser: boolean = false;
+  nextId = 4; // Removed explicit type annotation
+  displayModal = false; // Removed explicit type annotation
+  editingUser = false; // Removed explicit type annotation
   currentUser: User = { id: 0, name: '', email: '', role: '' }; // Default user model
 
   constructor(private router: Router) {}
@@ -43,7 +44,7 @@ export class ManageUsersComponent {
     this.displayModal = false; // Hide the modal
   }
 
-  onSubmit(form: any) {
+  onSubmit(form: NgForm) { // Change from 'FormGroup' to 'NgForm'
     if (form.invalid) {
       return; // Prevent submission if the form is invalid
     }

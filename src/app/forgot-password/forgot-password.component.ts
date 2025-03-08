@@ -19,12 +19,12 @@ export class ForgotPasswordComponent {
     if (form.valid) {
       const email = form.value['email']; // Use bracket notation for accessing form value
       this.authService.sendResetEmail(email).subscribe(
-        response => {
-          this.emailSent = true;
-          this.errorMessage = null; // Clear any previous errors
-          alert(response.message); // Use response.message as needed
-          this.resetPassword = true; // Show reset password fields
-        },
+        // response => {
+        //   this.emailSent = true;
+        //   this.errorMessage = null; // Clear any previous errors
+        //   alert(response.message); // Use response.message as needed
+        //   this.resetPassword = true; // Show reset password fields
+        // },
         error => {
           this.errorMessage = 'Failed to send reset email. Please try again.';
           console.error('Error sending reset link', error);
@@ -40,10 +40,10 @@ export class ForgotPasswordComponent {
 
       if (newPassword === confirmPassword) {
         this.authService.resetPassword(newPassword).subscribe(
-          response => {
-            alert('Your password has been reset successfully!');
-            this.router.navigate(['/login']); // Navigate to login page
-          },
+          // response => {
+          //   alert('Your password has been reset successfully!');
+          //   this.router.navigate(['/login']); // Navigate to login page
+          // },
           error => {
             this.errorMessage = 'Failed to reset password. Please try again.';
             console.error('Error resetting password', error);
